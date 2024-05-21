@@ -1,0 +1,12 @@
+[package]
+name = "tests"
+version = "0.1.0"
+edition = "2021"
+
+[dev-dependencies]
+casper-contract = { version = "4.0.0", default-features = false, features = ["test-support"] }
+casper-engine-test-support = { version = "7.0.1", features = ["test-support"] }
+casper-execution-engine = "7.0.1"
+casper-types = "4.0.1"
+casper_types_derive = "0.1.0"
+sha2 = "0.10"
