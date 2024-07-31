@@ -39,6 +39,7 @@ pub fn deploy_cep_78(builder: &mut InMemoryWasmTestBuilder) -> ContractHash {
                 "total_token_supply" => 100u64,
                 "ownership_mode" => 2u8,
                 "json_schema" => "",
+                "minting_mode" => 1u8,
                 "nft_kind" => 0u8,
                 "nft_metadata_kind" => 2u8,
                 "identifier_mode" => 0u8,

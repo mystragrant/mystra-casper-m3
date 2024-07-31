@@ -29,7 +29,8 @@ pub extern "C" fn call() {
     let contract_hash_parsed: ContractHash =
         ContractHash::from_formatted_str(&marketplace_hash).unwrap();
 
-    let deposit_purse: URef = system::create_purse();
+    let deposit_purse: URef =
+        runtime::call_contract(contract_hash_parsed, "get_reusable_purse", runtime_args! {});
 
     system::transfer_from_purse_to_purse(account::get_main_purse(), deposit_purse, amount, None)
         .unwrap_or_revert();
